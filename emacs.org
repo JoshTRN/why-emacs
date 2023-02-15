@@ -1,11 +1,46 @@
 #+TITLE: Why Emacs?
 * My Story
-** Inefficiencies With Standard Text Editors
-** Enter Vim in Vs Code
-** What was I still Missing?
-** Org Mode!
 
-*** Org babel
+** Traditional Editors
+*** Keybind overload
+Obviously, I started with simple keybindings. Of course the first, like most, even before I got into development was ~Ctrl/Command+C~ an ~Ctrl/Command+V~. But through the course of editing, I realized that there's a lot more I wanted to do e.g., selecting a single word. So I learned the ~Option/Control+Direction~ keys (something George somehow got through most of his career without knowing).
+
+As time went on, I was using the arrow keys in conjunction with ~Shift~ and ~Ctrl/Command~ to navigate the code performing various operations. It was very liberating. As a natural sort of progression, any time when I had to move my hand off the keyboard in order to do very standard text editing motions. A few examples that come to mind are:
+
+1. Selecting a whole line.
+2. Selecting inside a set of double/single quotes.
+3. Highlighting whole code blocks
+
+So I would try to find work-arounds for these various things. e.g. ~Ctrl/Command+Left~ to go to the beginning of the line then ~Shift+Ctrl/Command+Right~ to highlight to the end of the line.
+
+This, however, just made my hand movement problem worse! Eventually, I wanted a keyboard-centric solution for everything. So I would make keybindings in my VS Code's ~keybindings.json~ that tried to account for everything I wanted to do. I made keybindings for:
+
+1. Debugging operations
+   - step forward
+   - step into
+   - step out
+   - set breakpoint
+   - continue
+   - end
+2. Source Control
+   - next hunk
+   - previous hunk
+   - stage hunk
+   - commit what's staged and push
+3. Terminal operations
+   - Open/Close integrated terminal
+   - Create new terminal
+   - Navigate to specific terminal running specific process
+
+With VS Code, some of these things were not possible, but the ones that were possible were all ended up using some sort of ~Ctrl/Shift/Alt/Option/Command~ key chords and frequent use of the arrow keys. Eventually I was looking at the keybindings and I would have to internally argue with myself when I was overriding the standard keybindings. "Is this useful? Should I remap this? Will I remember this? Is this intuitive? etc." And this was already on top of the fact that it still felt like a break in my workflow to always move my hands down to the ~Ctrl/Shift/Alt/Option/Command~ and arrow keys. It was /as much/ of a break in my workflow as moving to the mouse, but it was still rather uncomfortable.
+
+** Vim
+
+** Emacs
+* Org Mode!
+** Export
+Org mode is what I used to create this blog/presentation.
+** Org babel
 
 Org babel allows you to execute programming languages in line! Here's an example with python.
 
@@ -37,3 +72,5 @@ print (sh ++ " or haskell or whatever. ")
 #+begin_src java :var hs=hs
 System.out.println(hs + "I guess java can be here too.");
 #+end_src
+* Magit
+* Drawbacks of Emacs
