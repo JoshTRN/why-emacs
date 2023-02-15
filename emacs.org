@@ -1,0 +1,39 @@
+#+TITLE: Why Emacs?
+* My Story
+** Inefficiencies With Standard Text Editors
+** Enter Vim in Vs Code
+** What was I still Missing?
+** Org Mode!
+
+*** Org babel
+
+Org babel allows you to execute programming languages in line! Here's an example with python.
+
+#+name: py
+#+begin_src python :results value
+return "Hello"
+#+end_src
+
+You can also take these results... and use them in other programming languages! take a look at what we got from the python execution and use it in Javascript.
+#+name: js
+#+begin_src js :var x=py :results output
+console.log(x + " world")
+#+end_src
+
+
+#+name: sh
+#+begin_src bash :var pyjs=js
+echo $pyjs from the terminal
+#+end_src
+
+
+#+name: hs
+#+begin_src haskell :var sh=sh
+print (sh ++ " or haskell or whatever. ")
+#+end_src
+
+
+#+name: jv
+#+begin_src java :var hs=hs
+System.out.println(hs + "I guess java can be here too.");
+#+end_src
