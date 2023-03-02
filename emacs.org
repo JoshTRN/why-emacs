@@ -1,4 +1,11 @@
 #+TITLE: Why Emacs?
+#+SETUPFILE: https://distro.tube/org-html-themes/org/theme-readtheorg.setup
+#+EXPORT_FILE_NAME: index.html
+#+HTML_HEAD: <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js" integrity="sha512-GA1YgNe8NTU3XMDMofUTpTNqMsPUL6VjYgc6NjOUTA/6pwTFlTmFc/tk+LnDfXD3/mNGZcik9kvfAjeVPTHisA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles.css" title="custom"/>
+#+HTML_HEAD: <script src="script.js" defer></script>
+#+OPTIONS: num:nil
+
 * My Story
 * Traditional Editors
 ** Keybind overload
@@ -67,33 +74,36 @@ Org mode is what I used to create this blog/presentation.
 Org babel allows you to execute programming languages in line! Here's an example with python.
 
 #+name: py
-#+begin_src python :results value
-return "Hello"
+#+begin_src python :results output :exports both
+print("Hello", end="")
 #+end_src
 
 You can also take these results... and use them in other programming languages! take a look at what we got from the python execution and use it in Javascript.
 
 #+name: js
-#+begin_src js :var x=py :results output
+#+begin_src js :var x=py :results output :exports both
 console.log(x + " world")
 #+end_src
 
+Then inside bash...
 
 #+name: sh
-#+begin_src bash :var pyjs=js
+#+begin_src bash :var pyjs=js :exports both
 echo $pyjs from the terminal
 #+end_src
 
+Or Haskell...
 
 #+name: hs
-#+begin_src haskell :var sh=sh
-print (sh ++ " or haskell or whatever. ")
+#+begin_src haskell :var sh=sh :exports both
+print (sh ++ " or haskell or whatever.")
 #+end_src
 
+Even Java.
 
 #+name: jv
-#+begin_src java :var hs=hs
-System.out.println(hs + "I guess java can be here too.");
+#+begin_src java :var hs=hs :exports both
+System.out.println(hs + " I guess java can be here too.");
 #+end_src
 
 ** Magit
