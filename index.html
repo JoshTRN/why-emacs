@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-03-01 Wed 23:27 -->
+<!-- 2023-03-02 Thu 11:23 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Why Emacs?</title>
@@ -210,39 +210,49 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org300432e">My Story</a></li>
-<li><a href="#orgd925072">Traditional Editors</a>
+<li><a href="#orga46964f">Introduction</a></li>
+<li><a href="#org03cb294">Traditional Editors</a>
 <ul>
-<li><a href="#org16681d6">Keybind overload</a></li>
+<li><a href="#org382ee63">Keybind overload</a></li>
 </ul>
 </li>
-<li><a href="#org7af8c04">Vim</a></li>
-<li><a href="#orgf798355">Emacs</a>
+<li><a href="#orgcd5ed74">Vim</a></li>
+<li><a href="#org34cbb0c">Emacs</a>
 <ul>
-<li><a href="#org43c8d31">Org Mode!</a>
+<li><a href="#org4e1d4c7">Navigation</a></li>
+<li><a href="#org1767e47">Dired</a></li>
+<li><a href="#org71d72dd">Terminal</a></li>
+<li><a href="#org5ce71c9">Org Mode!</a>
 <ul>
-<li><a href="#orgc1bcc51">Export</a></li>
-<li><a href="#orga231feb">Org babel</a></li>
+<li><a href="#org2cee54a">Tables</a></li>
+<li><a href="#orgb9b712e">Export</a></li>
+<li><a href="#orgf9b08a8">Org babel</a></li>
+<li><a href="#org03f60f6">Org-Roam</a></li>
 </ul>
 </li>
-<li><a href="#org1316da7">Magit</a></li>
+<li><a href="#org2d9d918">Magit</a></li>
 </ul>
 </li>
-<li><a href="#org471ab1f">Drawbacks of Emacs</a></li>
+<li><a href="#org786d50d">Drawbacks of Emacs</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org300432e" class="outline-2">
-<h2 id="org300432e">My Story</h2>
+<div id="outline-container-orga46964f" class="outline-2">
+<h2 id="orga46964f">Introduction</h2>
+<div class="outline-text-2" id="text-orga46964f">
+<p>
+I use a configuration of emacs that comes with the vim keybinds called spacemacs. As such, I've never used the default emacs keybindings, so everything in this presentation is going to be seen through this lens.
+</p>
 </div>
-<div id="outline-container-orgd925072" class="outline-2">
-<h2 id="orgd925072">Traditional Editors</h2>
-<div class="outline-text-2" id="text-orgd925072">
 </div>
-<div id="outline-container-org16681d6" class="outline-3">
-<h3 id="org16681d6">Keybind overload</h3>
-<div class="outline-text-3" id="text-org16681d6">
+<div id="outline-container-org03cb294" class="outline-2">
+<h2 id="org03cb294">Traditional Editors</h2>
+<div class="outline-text-2" id="text-org03cb294">
+</div>
+<div id="outline-container-org382ee63" class="outline-3">
+<h3 id="org382ee63">Keybind overload</h3>
+<div class="outline-text-3" id="text-org382ee63">
 <p>
 Obviously, I started with simple keybindings. Of course the first, like most, even before I got into development was <code>Ctrl/Command+C</code> an <code>Ctrl/Command+V</code>. But through the course of editing, I realized that there's a lot more I wanted to do e.g., selecting a single word. So I learned the <code>Option/Control+Direction</code> keys.
 </p>
@@ -258,7 +268,7 @@ As time went on, I was using the arrow keys in conjunction with <code>Shift</cod
 </ol>
 
 <p>
-So I would try to find work-arounds for these various things. e.g. <code>Ctrl/Command+Left</code> to go to the beginning of the line then <code>Shift+Ctrl/Command+Right</code> to highlight to the end of the line. And I never found quite the optimal solutions for many of these issues.
+So I would try to find work-arounds for these various things. e.g. <code>Home/Command+Left</code> to go to the beginning of the line then <code>Shift+Ctrl/Command+Right</code> to highlight to the end of the line. And I never found quite the optimal solutions for many of these issues.
 </p>
 
 <p>
@@ -301,9 +311,9 @@ What I needed, but didn't know I needed at the time was <i>modes</i>&#x2026;
 </div>
 </div>
 
-<div id="outline-container-org7af8c04" class="outline-2">
-<h2 id="org7af8c04">Vim</h2>
-<div class="outline-text-2" id="text-org7af8c04">
+<div id="outline-container-orgcd5ed74" class="outline-2">
+<h2 id="orgcd5ed74">Vim</h2>
+<div class="outline-text-2" id="text-orgcd5ed74">
 <p>
 Vim is a modal text editor. That means that the keyboard has different functions based on different conditions. Everyone already has experience with modal text editing and just don't recognize it as such. Specifically, holding the <code>Shift</code> key or pressing the caps lock key enters what I'll call "Uppercase Mode". In this mode, every key serves a different function than it did when we're not in it. i.e. Every key is in uppercase! For an introduction to vim, type <code>vimtutor</code> into the command line (assuming you have vim installed in your system which Windows/Mac and many linux distros have installed out of the box).
 </p>
@@ -324,7 +334,7 @@ My first experience with vim, like I assume most people, is that I got defaulted
 </p>
 
 
-<div id="org3968225" class="figure">
+<div id="org0ed1ce3" class="figure">
 <p><img src="./vim.png" alt="vim.png" />
 </p>
 </div>
@@ -341,38 +351,79 @@ I don't remember how exactly I got interested in vim, but I immediately wanted t
 </ul>
 
 <p>
-Vim is also extensible. Like VS Code in this way, you can install or create add ons in order to add functionality to the editor. I tried to get vim functioning the same way VS Code does, but there were many ways I found it difficult or broke my vim configuration several times, but I couldn't get rid of the modal editing. It changed my life for the better and I never wanted to go back. So what I <i>settled</i> for is vim emulation in VS Code&#x2026; Of course&#x2026; this didn't scratch all the itches.
+Vim is also extensible. Like VS Code in this way, you can install or create add ons in order to add functionality to the editor. I tried to get vim functioning the same way VS Code does, but there were many ways I found it difficult or broke my vim configuration several times, but I couldn't get rid of the modal editing. While I think I could have achieved in the list of DE-sirable keyboard-centric functionality, I didn't want to invest the time into crafting the perfect editor. Modal editing changed my life for the better and I never wanted to go back. So what I <i>settled</i> for is vim emulation in VS Code and if for any reason I have to use a different editor, I will always try to integrate some sort of vim emulation. Of course, vim emulation doesn't scratch all the itches.
 </p>
 </div>
 </div>
-<div id="outline-container-orgf798355" class="outline-2">
-<h2 id="orgf798355">Emacs</h2>
-<div class="outline-text-2" id="text-orgf798355">
+<div id="outline-container-org34cbb0c" class="outline-2">
+<h2 id="org34cbb0c">Emacs</h2>
+<div class="outline-text-2" id="text-org34cbb0c">
 <p>
-Emacs has a multitude of awesome features that make it appealing to me.
+Everything in emacs is a buffer. As such every bit of text in the editor can be manipulated the same way. This brings me to one of the main reasons I love using it, everything is keyboard centric.
 </p>
 </div>
-<div id="outline-container-org43c8d31" class="outline-3">
-<h3 id="org43c8d31">Org Mode!</h3>
-<div class="outline-text-3" id="text-org43c8d31">
-</div>
-<div id="outline-container-orgc1bcc51" class="outline-4">
-<h4 id="orgc1bcc51">Export</h4>
-<div class="outline-text-4" id="text-orgc1bcc51">
+<div id="outline-container-org4e1d4c7" class="outline-3">
+<h3 id="org4e1d4c7">Navigation</h3>
+<div class="outline-text-3" id="text-org4e1d4c7">
 <p>
-Org mode is what I used to create this blog/presentation.
+Jump to lines. Jump to words. Jump across buffers.
 </p>
 </div>
 </div>
-<div id="outline-container-orga231feb" class="outline-4">
-<h4 id="orga231feb">Org babel</h4>
-<div class="outline-text-4" id="text-orga231feb">
+<div id="outline-container-org1767e47" class="outline-3">
+<h3 id="org1767e47">Dired</h3>
+<div class="outline-text-3" id="text-org1767e47">
+<p>
+Dired is Emacs' file management system. If you think of all the stuff you can do with directories from the command line, you can do the same within emacs.
+</p>
+</div>
+</div>
+<div id="outline-container-org71d72dd" class="outline-3">
+<h3 id="org71d72dd">Terminal</h3>
+<div class="outline-text-3" id="text-org71d72dd">
+<p>
+If you remember back to this list of desirable operations I wanted to:
+</p>
+<ul class="org-ul">
+<li>Open/Close integrated terminal</li>
+<li>Create new terminal</li>
+<li>Navigate to specific terminal running specific process</li>
+</ul>
+
+<p>
+With a package called multi-vterm, I can do all these things. I also contributed to <code>spacemacs</code> to add it as one of the optional default terminals.
+</p>
+</div>
+</div>
+<div id="outline-container-org5ce71c9" class="outline-3">
+<h3 id="org5ce71c9">Org Mode!</h3>
+<div class="outline-text-3" id="text-org5ce71c9">
+</div>
+<div id="outline-container-org2cee54a" class="outline-4">
+<h4 id="org2cee54a">Tables</h4>
+<div class="outline-text-4" id="text-org2cee54a">
+<p>
+Tables can auto resize and act like spreadsheets.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb9b712e" class="outline-4">
+<h4 id="orgb9b712e">Export</h4>
+<div class="outline-text-4" id="text-orgb9b712e">
+<p>
+Org mode is what I used to create this blog/presentation. You can export by default to html, epub, latex and markdown. But with pandoc integration, you export to just about file format you want and I use it frequently to export to jira.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf9b08a8" class="outline-4">
+<h4 id="orgf9b08a8">Org babel</h4>
+<div class="outline-text-4" id="text-orgf9b08a8">
 <p>
 Org babel allows you to execute programming languages in line! Here's an example with python.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python" id="orge96dab8"><span style="color: #F92672;">print</span><span style="color: #8c8c8c;">(</span><span style="color: #00FFBF;">"Hello"</span>, end=<span style="color: #00FFBF;">""</span><span style="color: #8c8c8c;">)</span>
+<pre class="src src-python" id="org4709807"><span style="color: #F92672;">print</span><span style="color: #8c8c8c;">(</span><span style="color: #00FFBF;">"Hello"</span>, end=<span style="color: #00FFBF;">""</span><span style="color: #8c8c8c;">)</span>
 </pre>
 </div>
 
@@ -386,7 +437,7 @@ You can also take these results&#x2026; and use them in other programming langua
 </p>
 
 <div class="org-src-container">
-<pre class="src src-js" id="org4d07988">console.log<span style="color: #8c8c8c;">(</span>x + <span style="color: #00FFBF;">" world"</span><span style="color: #8c8c8c;">)</span>
+<pre class="src src-js" id="org2ce2056">console.log<span style="color: #8c8c8c;">(</span>x + <span style="color: #00FFBF;">" world"</span><span style="color: #8c8c8c;">)</span>
 </pre>
 </div>
 
@@ -400,7 +451,7 @@ Then inside bash&#x2026;
 </p>
 
 <div class="org-src-container">
-<pre class="src src-bash" id="org6d2e4ca"><span style="color: #F92672;">echo</span> $<span style="color: #00bfff;">pyjs</span> from the terminal
+<pre class="src src-bash" id="org4dffbb9"><span style="color: #F92672;">echo</span> $<span style="color: #00bfff;">pyjs</span> from the terminal
 </pre>
 </div>
 
@@ -414,7 +465,7 @@ Or Haskell&#x2026;
 </p>
 
 <div class="org-src-container">
-<pre class="src src-haskell" id="orgc14f8f2"><span style="color: #00d364; font-weight: bold;">print</span> <span style="color: #8c8c8c;">(</span>sh <span style="color: #F92672;">++</span> <span style="color: #00FFBF;">" or haskell or whatever."</span><span style="color: #8c8c8c;">)</span>
+<pre class="src src-haskell" id="org11b0850"><span style="color: #00d364; font-weight: bold;">print</span> <span style="color: #8c8c8c;">(</span>sh <span style="color: #F92672;">++</span> <span style="color: #00FFBF;">" or haskell or whatever."</span><span style="color: #8c8c8c;">)</span>
 </pre>
 </div>
 
@@ -428,7 +479,7 @@ Even Java.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-java" id="orgaef18d0">System.out.println<span style="color: #8c8c8c;">(</span>hs + <span style="color: #00FFBF;">" I guess java can be here too."</span><span style="color: #8c8c8c;">)</span>;
+<pre class="src src-java" id="org6a2b67c">System.out.println<span style="color: #8c8c8c;">(</span>hs + <span style="color: #00FFBF;">" I guess java can be here too."</span><span style="color: #8c8c8c;">)</span>;
 </pre>
 </div>
 
@@ -437,19 +488,47 @@ Hello world from the terminal or haskell or whatever. I guess java can be here t
 </pre>
 </div>
 </div>
-</div>
 
-<div id="outline-container-org1316da7" class="outline-3">
-<h3 id="org1316da7">Magit</h3>
+<div id="outline-container-org03f60f6" class="outline-4">
+<h4 id="org03f60f6">Org-Roam</h4>
+<div class="outline-text-4" id="text-org03f60f6">
+<p>
+Org mode provides Zettelkasten like functionality for an awesome note taking system.
+</p>
 </div>
 </div>
-<div id="outline-container-org471ab1f" class="outline-2">
-<h2 id="org471ab1f">Drawbacks of Emacs</h2>
+</div>
+<div id="outline-container-org2d9d918" class="outline-3">
+<h3 id="org2d9d918">Magit</h3>
+<div class="outline-text-3" id="text-org2d9d918">
+<p>
+Magit is a git interface that aims to have complete parity with git, but like everything with emacs, it's keyboard driven.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org786d50d" class="outline-2">
+<h2 id="org786d50d">Drawbacks of Emacs</h2>
+<div class="outline-text-2" id="text-org786d50d">
+<ul class="org-ul">
+<li>Steep Learning curve
+<img src="./learning-curve.png" alt="learning-curve.png" /></li>
+<li><p>
+Performance bottlenecks
+</p>
+
+<p>
+For some reason performance really tanked in Emacs 30. So I would install emacs 29 if you're interested. On mac, you can run <code>brew install emacs-plus@29</code> to install it.
+</p></li>
+
+<li>You start to wish everything was in emacs.</li>
+</ul>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: joshua</p>
-<p class="date">Created: 2023-03-01 Wed 23:27</p>
+<p class="date">Created: 2023-03-02 Thu 11:23</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
