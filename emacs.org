@@ -6,7 +6,8 @@
 #+HTML_HEAD: <script src="script.js" defer></script>
 #+OPTIONS: num:nil
 
-* My Story
+* Introduction
+
 * Traditional Editors
 ** Keybind overload
 Obviously, I started with simple keybindings. Of course the first, like most, even before I got into development was ~Ctrl/Command+C~ an ~Ctrl/Command+V~. But through the course of editing, I realized that there's a lot more I wanted to do e.g., selecting a single word. So I learned the ~Option/Control+Direction~ keys.
@@ -17,7 +18,7 @@ As time went on, I was using the arrow keys in conjunction with ~Shift~ and ~Ctr
 2. Selecting inside a set of double/single quotes.
 3. Highlighting whole code blocks
 
-So I would try to find work-arounds for these various things. e.g. ~Ctrl/Command+Left~ to go to the beginning of the line then ~Shift+Ctrl/Command+Right~ to highlight to the end of the line. And I never found quite the optimal solutions for many of these issues.
+So I would try to find work-arounds for these various things. e.g. ~Home/Command+Left~ to go to the beginning of the line then ~Shift+Ctrl/Command+Right~ to highlight to the end of the line. And I never found quite the optimal solutions for many of these issues.
 
 This, however, just made my hand movement problem worse! Eventually, I wanted a keyboard-centric solution for everything. So I would make keybindings in my VS Code's ~keybindings.json~ that tried to account for everything I wanted to do. I made keybindings for:
 
@@ -63,9 +64,8 @@ I don't remember how exactly I got interested in vim, but I immediately wanted t
 + Chris@Machine
 + ThePrimeagen
 
-Vim is also extensible. Like VS Code in this way, you can install or create add ons in order to add functionality to the editor. I tried to get vim functioning the same way VS Code does, but there were many ways I found it difficult or broke my vim configuration several times, but I couldn't get rid of the modal editing. It changed my life for the better and I never wanted to go back. So what I /settled/ for is vim emulation in VS Code... Of course... this didn't scratch all the itches.
+Vim is also extensible. Like VS Code in this way, you can install or create add ons in order to add functionality to the editor. I tried to get vim functioning the same way VS Code does, but there were many ways I found it difficult or broke my vim configuration several times, but I couldn't get rid of the modal editing. While I think I could have achieved in the list of DE-sirable keyboard-centric functionality, I didn't want to invest the time into crafting the perfect editor. Modal editing changed my life for the better and I never wanted to go back. So what I /settled/ for is vim emulation in VS Code and if for any reason I have to use a different editor, I will always try to integrate some sort of vim emulation. Of course, vim emulation doesn't scratch all the itches.
 * Emacs
-Emacs has a multitude of awesome features that make it appealing to me.
 ** Org Mode!
 *** Export
 Org mode is what I used to create this blog/presentation.
