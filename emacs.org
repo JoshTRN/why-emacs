@@ -128,4 +128,7 @@ Org mode provides Zettelkasten like functionality for an awesome note taking sys
 + Steep Learning curve
   [[./learning-curve.png]]
 + Performance bottlenecks
+
+  For some reason performance really tanked in Emacs 30. So I would install emacs 29 if you're interested. On mac, you can run ~brew install emacs-plus@29~ to install it.
+
 + You start to wish everything was in emacs.
