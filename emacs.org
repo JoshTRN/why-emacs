@@ -7,7 +7,7 @@
 #+OPTIONS: num:nil
 
 * Introduction
-
+I use a configuration of emacs that comes with the vim keybinds called spacemacs. As such, I've never used the default emacs keybindings, so everything in this presentation is going to be seen through this lens.
 * Traditional Editors
 ** Keybind overload
 Obviously, I started with simple keybindings. Of course the first, like most, even before I got into development was ~Ctrl/Command+C~ an ~Ctrl/Command+V~. But through the course of editing, I realized that there's a lot more I wanted to do e.g., selecting a single word. So I learned the ~Option/Control+Direction~ keys.
@@ -66,9 +66,23 @@ I don't remember how exactly I got interested in vim, but I immediately wanted t
 
 Vim is also extensible. Like VS Code in this way, you can install or create add ons in order to add functionality to the editor. I tried to get vim functioning the same way VS Code does, but there were many ways I found it difficult or broke my vim configuration several times, but I couldn't get rid of the modal editing. While I think I could have achieved in the list of DE-sirable keyboard-centric functionality, I didn't want to invest the time into crafting the perfect editor. Modal editing changed my life for the better and I never wanted to go back. So what I /settled/ for is vim emulation in VS Code and if for any reason I have to use a different editor, I will always try to integrate some sort of vim emulation. Of course, vim emulation doesn't scratch all the itches.
 * Emacs
+Everything in emacs is a buffer. As such every bit of text in the editor can be manipulated the same way. This brings me to one of the main reasons I love using it, everything is keyboard centric.
+** Navigation
+Jump to lines. Jump to words. Jump across buffers.
+** Dired
+Dired is Emacs' file management system. If you think of all the stuff you can do with directories from the command line, you can do the same within emacs.
+** Terminal
+If you remember back to this list of desirable operations I wanted to:
+   + Open/Close integrated terminal
+   + Create new terminal
+   + Navigate to specific terminal running specific process
+
+With a package called multi-vterm, I can do all these things. I also contributed to ~spacemacs~ to add it as one of the optional default terminals.
 ** Org Mode!
+*** Tables
+Tables can auto resize and act like spreadsheets.
 *** Export
-Org mode is what I used to create this blog/presentation.
+Org mode is what I used to create this blog/presentation. You can export by default to html, epub, latex and markdown. But with pandoc integration, you export to just about file format you want and I use it frequently to export to jira.
 *** Org babel
 
 Org babel allows you to execute programming languages in line! Here's an example with python.
@@ -106,5 +120,12 @@ Even Java.
 System.out.println(hs + " I guess java can be here too.");
 #+end_src
 
+*** Org-Roam
+Org mode provides Zettelkasten like functionality for an awesome note taking system.
 ** Magit
+ Magit is a git interface that aims to have complete parity with git, but like everything with emacs, it's keyboard driven.
 * Drawbacks of Emacs
++ Steep Learning curve
+  [[./learning-curve.png]]
++ Performance bottlenecks
++ You start to wish everything was in emacs.
