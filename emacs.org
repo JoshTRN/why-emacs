@@ -59,10 +59,10 @@ My first experience with vim, like I assume most people, is that I got defaulted
 
 I don't remember how exactly I got interested in vim, but I immediately wanted to learn it the moment I understood what it was. Being interested in programming, I of course end up getting recommended programming related content on YouTube. I'm sure vim content was in some of those recommendations. And some specific YouTubers which helped me take that leap were:
 
-+ Distrotube
-+ Luke Smith
-+ Chris@Machine
-+ ThePrimeagen
++ [[https://www.youtube.com/c/distrotube][Distrotube]]
++ [[https://www.youtube.com/c/lukesmithxyz][Luke Smith]]
++ [[https://www.youtube.com/c/chrisatmachine][Chris@Machine]]
++ [[https://www.youtube.com/c/theprimeagen][ThePrimeagen]]
 
 Vim is also extensible. Like VS Code in this way, you can install or create add ons in order to add functionality to the editor. I tried to get vim functioning the same way VS Code does, but there were many ways I found it difficult or broke my vim configuration several times, but I couldn't get rid of the modal editing. While I think I could have achieved in the list of DE-sirable keyboard-centric functionality, I didn't want to invest the time into crafting the perfect editor. Modal editing changed my life for the better and I never wanted to go back. So what I /settled/ for is vim emulation in VS Code and if for any reason I have to use a different editor, I will always try to integrate some sort of vim emulation. Of course, vim emulation doesn't scratch all the itches.
 * Emacs
